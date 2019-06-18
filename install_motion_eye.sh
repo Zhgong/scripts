@@ -30,13 +30,11 @@ step "Install motion"
 :'
 note: Raspbian Stretch comes with motion version 4.0; it is however recommended that you install version 4.1
 '
-# wget https://github.com/Motion-Project/motion/releases/download/release-4.2.2/pi_stretch_motion_4.2.2-1_armhf.deb
-# dpkg -i pi_stretch_motion_4.2.2-1_armhf.deb
 
-# wget https://github.com/Motion-Project/motion/releases/download/release-4.1.1/pi_stretch_motion_4.1.1-1_armhf.deb
-# dpkg -i pi_stretch_motion_4.1.2-1_armhf.deb
+wget https://github.com/Motion-Project/motion/releases/download/release-4.1.1/pi_stretch_motion_4.1.1-1_armhf.deb
+dpkg -i pi_stretch_motion_4.1.1-1_armhf.deb
 
-# quit_error
+quit_error
 
 step "Install the dependencies from the repositories" 
 apt-get install python-pip python-dev libssl-dev libcurl4-openssl-dev libjpeg-dev libz-dev -y
