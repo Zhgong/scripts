@@ -61,4 +61,8 @@ systemctl start motioneye
 
 quit_error
 
+# testing capturing a pcture
+# choose mmal camera in this case
+raspistill -v -o test.jpg
+
 echo "Finish. Default port: 8765, Username: admin"
