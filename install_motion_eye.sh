@@ -1,3 +1,4 @@
+#!/bin/bash
 
 echo reference: https://github.com/ccrisan/motioneye/wiki/Install-On-Raspbian
 step=1

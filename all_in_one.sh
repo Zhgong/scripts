@@ -1,3 +1,4 @@
+#!/bin/bash
 # declare -a scripts
 
 # scripts=("first_run.sh", "install_motion_eye.sh")
