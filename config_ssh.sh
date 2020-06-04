@@ -29,4 +29,8 @@ function modify() {
 modify "PermitRootLogin"
 modify "PermitEmptyPasswords"
 
+echo ######################################################################
+echo "Don't forget to run command to use ssh without password"
+echo "cat ~/.ssh/id_rsa.pub | ssh pi@raspberrypi 'cat >> .ssh/authorized_keys'"
+echo ######################################################################
 
