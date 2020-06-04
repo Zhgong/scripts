@@ -16,25 +16,18 @@ quit_error() {
     fi
 }
 
-step "Install ffmpeg and v4l-utils"
-apt-get install ffmpeg v4l-utils -y
-
+step "install ffmpeg and other motion dependencies"
+apt-get install ffmpeg libmariadb3 libpq5 libmicrohttpd12 -y
 quit_error
 
 
-step "Install libmariadbclient18 and libpq5 required by motion"
-apt-get install libmariadbclient18 libpq5 -y
-
-quit_error
 
 step "Install motion"
 :'
-note: Raspbian Stretch comes with motion version 4.0; it is however recommended that you install version 4.1
+note: Raspbian Buster comes with motion version 4.1; it is however recommended that you install version 4.2, as indicated above
 '
-
-wget https://github.com/Motion-Project/motion/releases/download/release-4.1.1/pi_stretch_motion_4.1.1-1_armhf.deb
-dpkg -i pi_stretch_motion_4.1.1-1_armhf.deb
-
+wget https://github.com/Motion-Project/motion/releases/download/release-4.2.2/pi_buster_motion_4.2.2-1_armhf.deb && \
+       	dpkg -i pi_buster_motion_4.2.2-1_armhf.deb
 quit_error
 
 step "Install the dependencies from the repositories" 
