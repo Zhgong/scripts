@@ -5,7 +5,7 @@
 # PermitRootLogin no
 # PermitEmptyPasswords no
 
-config_file="/etc/ssh/ssh_config"
+config_file="/etc/ssh/sshd_config"
 
 function modify() {
     key_word=$1
