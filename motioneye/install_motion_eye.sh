@@ -35,7 +35,8 @@ apt-get install python-pip python-dev libssl-dev libcurl4-openssl-dev libjpeg-de
 quit_error
 
 step "Install motioneye"
-pip install motioneye
+# pip install motioneye # some times the install process via pip could be killed by system due to memory limit
+pip install motioneye --no-cache-dir # so this is the resure
 quit_error
 
 step "Prepare the configuration directory"
