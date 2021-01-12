@@ -3,7 +3,7 @@
 ## Problem
 ```docker run hello-world``` case ``` ... aufs ... ``` error.
 
-## Solution
+## Solution 1
 [link to stackoverflow](https://stackoverflow.com/questions/30248794/run-docker-in-ubuntu-live-disk)
 
 - Appending
@@ -16,6 +16,17 @@
 ...
 ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --storage-driver=devicemapper
 ...
+```
+
+
+## Solution 2
+
+```sudo vim /etc/docker/daemon.json```
+
+```
+{
+  "storage-driver": "devicemapper"
+}
 ```
 
 - sysetmctl daemon-reload
