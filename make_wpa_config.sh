@@ -13,6 +13,7 @@ fi
 
 echo "generated wpa_supplicant.conf:"
 echo "#== copy and past following content to 'wpa_supplicant.conf' and put it in /boot on SD card: ==#"
+echo "Works only with Raspbian, if you are using Ubuntu, it will NOT work. Please follow the instruction on Ubuntu's offical website."
 echo country=GB
 echo ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 echo update_config=1
