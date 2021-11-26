@@ -1,0 +1,17 @@
+version: "3.3"
+
+services:
+        motioneye:
+                container_name: "motioneye"
+                image: "ccrisan/motioneye:master-amd64"
+                hostname: "motioneye"
+                ports:
+                        - "8081:8081"
+                        - "8765:8765"
+                volumes:
+                        - /etc/localtime:/etc/localtime:ro
+                        - /etc/motioneye:/etc/motioneye
+                        - /var/lib/motioneye:/var/lib/motioneye
+                devices:
+                        - /dev/video0:/dev/video0
+                restart: unless-stopped
